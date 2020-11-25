@@ -1,0 +1,158 @@
+
+<!-- Header template-->
+<div class="page-header clear-filter" filter-color="black">
+    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('../../assets/img/img_reservation.jpg');">
+    </div>
+      <div class="container">
+          <div class="content-center brand">
+              <h3>Tout un panel de professionels pour vous</h3>
+          </div>
+      </div>
+  </div>
+
+<!-- Content de la page-->
+  <br> <br>
+<div class="row justify-content-md-center">
+    <div class="col-sm-9">
+        <div class="card" >
+            <div class="card-header">
+                <h4 class="card-title" style="text-align: center;"> Formulaire de prise de RDV</h4>
+              </div>
+            <form>  
+    <!-- Nom, prénom et email-->
+    <div class="form-row">
+        <div class="form-group col-sm-3">
+            <label for="inputNom">Nom</label>
+            <input type="text" class="form-control" id="inputNom" placeholder="Nom">
+        </div>
+    
+        <div class="form-group col-sm-3">
+            <label for="inputPrenom">Prenom</label>
+            <input type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
+        </div>
+
+        <div class="form-group col-sm-4">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+    </div>
+
+
+    
+    <!-- Ville, salon et date-->
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="inputVille">Ville</label>
+        <select id="inputVille" class="form-control">
+            <option selected>Choose...</option>
+            <option>Bordeaux</option>
+            <option>Toulouse</option>
+            <option>Nice</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-2">
+        <label for="inputSalon">Salon</label>
+        <select id="inputSalon" class="form-control">
+          <option selected>Choose...</option>
+          <option>Salon1</option>
+          <option>Salon2</option>
+          <option>Salon3</option>
+          <option>Salon4</option>
+          <option>Salon5</option>
+        </select>
+      </div>
+
+        <div class="form-row">
+            <div class="col-sm-8">
+                <label for="inputDate">Date</label>
+                <div class="datepicker-container">
+                    <div class="form-group">
+                    <input class="form-control datetimepicker" placeholder="06/07/2017"
+                           name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" data-color="orange">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="">
+            Check me out
+            <span class="form-check-sign">
+              <span class="check"></span>
+            </span>
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Footer template-->
+<div class="row justify-content-md-center sharing-area text-center">
+<div class="text-center col-md-12 col-lg-8">
+  <h3>Thank you for supporting us!</h3>
+</div>
+<div class="text-center col-md-12 col-lg-8">
+  <a target="_blank" href="https://www.twitter.com/creativetim" class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip" title="Follow us">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like us">
+    <i class="fab fa-facebook-square"></i>
+  </a>
+  <a target="_blank" href="https://www.linkedin.com/company-beta/9430489/" class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip" title="Follow us">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a target="_blank" href="https://github.com/creativetimofficial/now-ui-kit-angular" class="btn btn-neutral btn-icon btn-github btn-round btn-lg" rel="tooltip" title="Star on Github">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+</div>
+<footer class="footer" data-background-color="black">
+<div class="container">
+<nav>
+<ul>
+  <li>
+      <a href="https://www.creative-tim.com">
+          Creative Tim
+      </a>
+  </li>
+  <li>
+      <a href="https://www.creative-tim.com/about-us">
+          About Us
+      </a>
+  </li>
+  <li>
+      <a href="http://blog.creative-tim.com">
+          Blog
+      </a>
+  </li>
+  <li>
+      <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+          MIT License
+      </a>
+  </li>
+</ul>
+</nav>
+<div class="copyright">
+&copy;
+{{data | date: 'yyyy'}}, Designed by
+<a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+<a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+</div>
+</div>
+</footer>
+
+
+
+
