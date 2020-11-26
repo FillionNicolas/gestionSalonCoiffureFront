@@ -14,6 +14,10 @@ import { ReservationsComponent } from './reservations/reservations.component';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { IndexComponent } from './index/index.component';
+import { AvisService } from './services/avisService';
+import { ReclamationService } from './services/reclamationService';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -25,6 +29,7 @@ import { IndexComponent } from './index/index.component';
         ReclamationsComponent,
         BoutiqueComponent,
         IndexComponent,
+      
 
     ],
     imports: [
@@ -34,9 +39,13 @@ import { IndexComponent } from './index/index.component';
         RouterModule,
         AppRoutingModule,
         ComponentsModule,
-        ExamplesModule
+        ExamplesModule,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [
+        AvisService,
+        ReclamationService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
