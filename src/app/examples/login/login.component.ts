@@ -12,7 +12,7 @@ import { AuthentificationService } from 'app/service/authentification.service';
 })
 export class LoginComponent implements OnInit {
 
-    username = 'javainuse'
+    username = ''
     password = ''
     invalidLogin = false
 
