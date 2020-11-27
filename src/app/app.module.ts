@@ -17,6 +17,7 @@ import { IndexComponent } from './index/index.component';
 import { AvisService } from './services/avisService';
 import { ReclamationService } from './services/reclamationService';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -29,6 +30,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         ReclamationsComponent,
         BoutiqueComponent,
         IndexComponent,
+        LogoutComponent,
       
 
     ],
@@ -40,7 +42,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         ComponentsModule,
         ExamplesModule,
-        HttpClientModule
+        HttpClientModule,
+        ExamplesModule
     ],
     providers: [
         AvisService,
