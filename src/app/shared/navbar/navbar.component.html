@@ -40,14 +40,14 @@
             </li>
 
             <li class="nav-item">
-              <a  class="nav-item nav-link" [routerLink]="['/services']">
+              <a *ngIf="loginService.isUserLoggedIn()" class="nav-item nav-link" [routerLink]="['/services']">
                   <i class="now-ui-icons design_scissors"></i>
                   <p>Services</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a  class="nav-item nav-link" [routerLink]="['/reservations']">
+              <a *ngIf="loginService.isUserLoggedIn()" class="nav-item nav-link" [routerLink]="['/reservations']">
                   <i class="now-ui-icons ui-1_calendar-60"></i>
                   <p>Prendre rendez-vous</p>
               </a>
@@ -61,7 +61,7 @@
             </li>
 
             <li class="nav-item">
-              <a  class="nav-item nav-link" [routerLink]="['/boutique']">
+              <a *ngIf="loginService.isUserLoggedIn()" class="nav-item nav-link" [routerLink]="['/boutique']">
                   <i class="now-ui-icons shopping_shop"></i>
                   <p>Boutique</p>
               </a>
