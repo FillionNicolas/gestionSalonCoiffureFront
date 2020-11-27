@@ -17,13 +17,12 @@ import { IndexComponent } from './index/index.component';
 import { AvisService } from './service/avisService';
 import { ReclamationService } from './service/reclamationService';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-// import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
 import { CreateAccountComponent } from './createAccount/createaccount.component';
 import { ReservationService } from './service/reservation.service';
 import { PrestationService } from './service/prestation.service';
 import { SalonService } from './service/salon.service';
-
+import { ProduitService } from './service/produits.service';
 
 
 
@@ -55,7 +54,8 @@ import { SalonService } from './service/salon.service';
     providers: [
         AvisService,
         ReclamationService,
-        ReservationService, PrestationService, SalonService
+        ReservationService, PrestationService, SalonService,
+        ProduitService
     ],
     bootstrap: [AppComponent]
 })

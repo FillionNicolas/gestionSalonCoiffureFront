@@ -17,7 +17,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { CreateAccountComponent } from './createAccount/createaccount.component';
 
 const routes: Routes =[
-    { path: '', redirectTo: 'index', pathMatch: 'full' },
+    { path: '', redirectTo: 'index2', pathMatch: 'full' },
     { path: 'index',               component: ComponentsComponent },
     { path: 'nucleoicons',          component: NucleoiconsComponent },
     { path: 'examples/landing',     component: LandingComponent },
