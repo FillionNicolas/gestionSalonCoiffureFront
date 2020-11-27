@@ -37,7 +37,85 @@
         </div>
     </div>
 
+<!-- Ajouter et delete une reservation-->
+<div>
+  <h4>Ajouter un reservation</h4>
+  <form (ngSubmit)="saveReservation()">
+      <label>DateReservation</label>
+      <input type="text" [(ngModel)]="reservation.dateReservation" name="dateReservation"/>
+      <button>Ajouter</button>
+  </form>
+</div>
 
+
+<div>
+  <table>
+      <tr>
+              <th>DateReservation</th>
+              <th>Action</th>
+      </tr>
+      <tr *ngFor="let u of reservations">
+              <td>{{u.dateReservation}}</td>
+              <td><button (click)="deleteReservation(u)">Delete</button></td>       
+      </tr>
+  </table>
+</div>
+
+<!-- Ajouter et delete une prestation-->
+<div>
+  <h4>Ajouter un prestation</h4>
+  <form (ngSubmit)="savePrestation()">
+      <label>NomPrestation</label>
+      <input type="text" [(ngModel)]="prestation.nomPrestation" name="nomPrestation"/>
+      <button>Ajouter</button>
+  </form>
+</div>
+
+<div>
+  <table>
+      <tr>
+              <th>NomPrestation</th>
+              <th>Action</th>
+      </tr>
+      <tr *ngFor="let u of prestations">
+              <td>{{u.nomPrestation}}</td>
+              <td><button (click)="deletePrestation(u)">Delete</button></td>       
+      </tr>
+  </table>
+</div>
+
+<!-- Ajouter et delete une salon-->
+
+<div>
+  <h4>Ajouter un salon</h4>
+  <form (ngSubmit)="saveSalon()">
+      <label>NomSalon</label>
+      <input type="text" [(ngModel)]="salon.nomSalon" name="nomSalon"/>
+      <label>AdressSalon</label>
+      <input type="text" [(ngModel)]="salon.adresseSalon" name="adresseSalon"/>
+      <label>PhoneNumber</label>
+      <input type="text" [(ngModel)]="salon.phonenumber" name="phonenumber"/>
+      <button>Ajouter</button>
+  </form>
+</div>
+
+<div>
+  <table>
+      <tr>
+              <th>NomSalon</th>
+              <th>AdressSalon</th>
+              <th>PhoneNumber</th>
+              <th>Action</th>
+      </tr>
+      <tr *ngFor="let u of salons">
+              <td>{{u.nomSalon}}</td>
+              <td>{{u.adresseSalon}}</td>
+              <td>{{u.phonenumber}}</td>
+              <td><button (click)="deleteSalon(u)">Delete</button></td>
+              
+      </tr>
+  </table>
+</div>
     
     <!-- Ville, salon et date-->
     <div class="form-row">

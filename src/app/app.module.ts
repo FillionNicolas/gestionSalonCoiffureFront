@@ -17,8 +17,13 @@ import { IndexComponent } from './index/index.component';
 import { AvisService } from './service/avisService';
 import { ReclamationService } from './service/reclamationService';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
 import { CreateAccountComponent } from './createAccount/createaccount.component';
+import { ReservationService } from './service/reservation.service';
+import { PrestationService } from './service/prestation.service';
+import { SalonService } from './service/salon.service';
+
 
 
 
@@ -49,7 +54,8 @@ import { CreateAccountComponent } from './createAccount/createaccount.component'
     ],
     providers: [
         AvisService,
-        ReclamationService
+        ReclamationService,
+        ReservationService, PrestationService, SalonService
     ],
     bootstrap: [AppComponent]
 })
