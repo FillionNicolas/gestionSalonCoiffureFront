@@ -1,0 +1,193 @@
+<div class="page-header clear-filter" filter-color="black">
+  <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('../../assets/img/img_reclamations.jpg');">
+    
+  </div>
+    <div class="container">
+        <div class="content-center brand">
+            <h1 class="h1-seo">Nos Services</h1>
+            <h3>Une question sur une prestation? un produit? Nos équipes s'engagent à vous répondre au plus vite !</h3>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid"> 
+  <p>   </p>
+</div> 
+
+<div class="container-fluid">
+
+    <div class="col-sm-6-mb-4">
+      <div class="card" >
+        <div class = "card-header">
+     
+          <h4 class="card-title"style="text-align: center;">Nos clients parlent de nous</h4>
+        </div>
+        <div class="card-body">
+          
+        
+          <p class="card-text"  style="text-align: center;" *ngFor  ="let avis of aviss" >
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chat-right-text-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+            </svg>
+            <strong>     {{avis.titre}}  </strong>
+             <em> :      {{avis.description}}</em> 
+          </p>   
+        </div>
+      
+      </div>
+  </div>
+   
+
+
+
+
+<!-- https://angular.io/guide/dynamic-form-->
+
+
+  <div class="col-sm-6-mb-4">
+      <div class="card" >
+          <div class="card-header">
+              <h4 class="card-title" style="text-align: center;"> Formulaire de prise de contact</h4>
+          </div>
+          <form (ngSubmit) ="saveReclamation()">  
+             
+            <div class="form-row">
+
+                <div class="form-group col-md-1">
+                </div>
+
+                <div class="form-group col-md-4">
+                               
+                 <div class="card">
+                    <div class="card-header">
+                    <h6 class="card-title" style="text-align: center;"> Choississez une option</h6>
+                    </div>
+                  <div class = "card-body">
+                 <div class="form-check">
+                   <input class="form-check-input" type="radio" name="titre"  [(ngModel)]="reclamation.titre" id="exampleRadios1" value="Une plainte" checked>
+                   <label class="form-check-label" for="exampleRadios1">
+                     Une plainte
+                   </label>
+                 </div>
+                 <div class="form-check">
+                   <input class="form-check-input" type="radio" name="titre"  [(ngModel)]="reclamation.titre" id="exampleRadios1" value="Concerne le prersonnel" checked>
+                    <label class="form-check-label" for="exampleRadios2">
+                     Concerne le personnel 
+                   </label>
+                 </div>
+                 <div class="form-check">
+                   <input class="form-check-input" type="radio" name="titre"  [(ngModel)]="reclamation.titre" id="exampleRadios1" value="Question sur un produit" checked>
+                    <label class="form-check-label" for="exampleRadios3">
+                     Question sur un produit
+                   </label>
+                 </div>
+
+                </div>
+                </div>
+              </div>
+
+
+             <div class="form-group col-md-6">
+              <div class="card">
+                <div class="card-header">
+                <h6 class="card-title" style="text-align: center;">Puis écrivez-nous ... </h6>
+                </div>
+                <label for="inputDemande"></label>
+                <textarea class="form-control" name="description" rows="5" [(ngModel)]="reclamation.description" placeholder="écrivez-nous un message ici..."></textarea>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+             </div>
+          </div>
+
+        </div>        
+    </form>
+      
+       
+  </div>
+
+<!-- Pour les autres services -->
+<div class="container">
+
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src=" url('../../assets/img/img_onglerie.jpg" alt="Generic placeholder image" width="140" height="140">
+       <h2>Onglerie</h2>
+      <p>Nos partenaires vous proposent leurs services pour entretenir la beauté de vos ongles</p>
+    <p><a class="btn btn-secondary" href="#" role="button">Pour plus de détails »</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <img class="rounded-circle" src=" url('../../assets/img/img_estheticienne.jpg" alt="Generic placeholder image" width="140" height="140">
+    <h2>Esthéticienne</h2>
+    <p>Une consultation sans rendez-vous est possible pour nos clientes dans notre Institut partenaire</p>
+    <p><a class="btn btn-secondary" href="#" role="button">Pour plus de détails »</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4">
+    <img class="rounded-circle" src=" url('../../assets/img/img_beaute_chevelure.jpg" alt="Generic placeholder image" width="140" height="140">
+    <h2>Notre Blog Beauté</h2>
+    <p>Vous cherchez des conseils pour entretenir votre chevelure sans perdre votre temps. Retrouvez tous nos conseils sur notre blog </p>
+    <p><a class="btn btn-secondary" href="#" role="button">Pour plus de détails »</a></p>
+  </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+
+</div>
+    
+
+
+
+
+
+
+
+<!-- Footer template-->
+<div class="row justify-content-md-center sharing-area text-center">
+<div class="text-center col-md-12 col-lg-8">
+<h3>Thanks to your support</h3>
+</div>
+<div class="text-center col-md-12 col-lg-8">
+<a target="_blank" href="https://www.twitter.com/creativetim" class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip" title="Follow us">
+  <i class="fab fa-twitter"></i>
+</a>
+<a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like us">
+  <i class="fab fa-facebook-square"></i>
+</a>
+<a target="_blank" href="https://www.linkedin.com/company-beta/9430489/" class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip" title="Follow us">
+  <i class="fab fa-linkedin"></i>
+</a>
+<a target="_blank" href="https://github.com/creativetimofficial/now-ui-kit-angular" class="btn btn-neutral btn-icon btn-github btn-round btn-lg" rel="tooltip" title="Star on Github">
+  <i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<footer class="footer" data-background-color="black">
+<div class="container">
+<nav>
+<ul>
+<li>
+    <a href="https://www.creative-tim.com">
+        Creative Tim
+    </a>
+</li>
+<li>
+    <a href="https://www.creative-tim.com/about-us">
+        About Us
+    </a>
+</li>
+<li>
+    <a href="http://blog.creative-tim.com">
+        Blog
+    </a>
+</li>
+<li>
+    <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+        MIT License
+    </a>
+</li>
+</ul>
+</nav>
+<div class="copyright">
+&copy;
+{{data | date: 'yyyy'}}, Designed by
+<a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+<a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+</div>
+</div>
+</footer>
