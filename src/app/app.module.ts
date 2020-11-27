@@ -17,7 +17,11 @@ import { IndexComponent } from './index/index.component';
 import { AvisService } from './services/avisService';
 import { ReclamationService } from './services/reclamationService';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
+import { ReservationService } from './service/reservation.service';
+import { PrestationService } from './service/prestation.service';
+import { SalonService } from './service/salon.service';
 
 
 
@@ -47,7 +51,8 @@ import { LogoutComponent } from './logout/logout.component';
     ],
     providers: [
         AvisService,
-        ReclamationService
+        ReclamationService,
+        ReservationService, PrestationService, SalonService
     ],
     bootstrap: [AppComponent]
 })
