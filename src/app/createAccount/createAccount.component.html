@@ -1,0 +1,151 @@
+<!-- Header template -->
+<div class="page-header clear-filter" filter-color="black">
+    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('../../assets/img/img_client_coiffure.jpg');">
+    </div>
+      <div class="container">
+          <div class="content-center brand">
+              <h3>Bienvenu dans notre espace client</h3>
+          </div>
+      </div>
+  </div>
+  
+  
+  
+
+  
+
+  
+
+<!-- https://angular.io/guide/dynamic-form-->
+
+<div class="card">
+  <div class="card-header">
+  <h6 class="card-title" style="text-align: center;"> Renseignez vos informations</h6>
+  </div>
+  <div class = "card-body">
+<!-- Formulaire-->
+<form (ngSubmit) ="save()">  
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label"> Nom :</label>    
+    <div class="col-10">
+      <input type="text"  name= "nomUtilisateur" [(ngModel)]="utilisateur.nomUtilisateur" class="form-control"  placeholder="Votre Nom">     
+      </div>  
+  </div> 
+  <div class="form-group row">
+    <label for="example-search-input" class="col-2 col-form-label">Prénom</label>
+    <div class="col-10">
+      <input type="text" class="form-control"  name= "prenomUtilisateur" [(ngModel)]="utilisateur.prenomUtilisateur"  placeholder="Votre prénom">     
+    </div>
+  </div>      
+  <div class="form-group row">
+    <label for="example-search-input" class="col-2 col-form-label">Login</label>
+    <div class="col-10">        
+       <input type="text" class="form-control" name= "loginUtilisateur" [(ngModel)]="utilisateur.loginUtilisateur" placeholder="Votre login">
+    </div>
+  </div>   
+  <div class="form-group row">
+    <label for="example-search-input" class="col-2 col-form-label">Mot de Passe</label>
+    <div class="col-10">         
+        <input type="password" class="form-control" name="passwordUtilisateur" [(ngModel)]="utilisateur.passwordUtilisateur" placeholder="votre mot de passe">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-search-input" class="col-2 col-form-label">Date de Naissance</label>
+    <div class="col-10"> 
+      <input class="form-control" type="date"  [(ngModel)]="utilisateur.dateNaissanceUtilisateur" value="2011-08-19" name ="dateNaissanceUtilisateur">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-number-input" class="col-2 col-form-label">Téléphone</label>
+    <div class="col-10">
+      <input type="text" class="form-control" [(ngModel)]="utilisateur.numeroTelephoneUtilisateur" name="numeroTelephoneUtilisateur" placeholder="0101010101">
+    </div>
+  </div>
+  <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">Ville</label>
+      <div class="col-10">
+        <input type="text" class="form-control"  [(ngModel)]="utilisateur.villeUtilisateur" name="villeUtilisateur" placeholder="Paris...">
+     </div>
+  </div>  
+  <div class="form-group row">
+    <label for="example-search-input" class="col-2 col-form-label">Adresse</label>
+    <div class="col-10">  
+      <input type="text" class="form-control" i [(ngModel)]="utilisateur.adresseUtilisateur" name="adresseUtilisateur" placeholder="15, rue des vénus">
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary"  >Créer mon compte</button>
+  <button type="submit" class="btn btn-primary" [routerLink]="['/login']" >Me connecter à me compte</button>
+
+</form>
+<!-- fin formulaire-->
+</div>
+</div>
+<!--  href="http://localhost:4200/login"-->
+     
+      
+       
+
+
+
+    
+
+
+
+
+
+
+<!-- Footer template-->
+<div class="row justify-content-md-center sharing-area text-center">
+<div class="text-center col-md-12 col-lg-8">
+<h3>Thanks to your support</h3>
+</div>
+<div class="text-center col-md-12 col-lg-8">
+<a target="_blank" href="https://www.twitter.com/creativetim" class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip" title="Follow us">
+  <i class="fab fa-twitter"></i>
+</a>
+<a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like us">
+  <i class="fab fa-facebook-square"></i>
+</a>
+<a target="_blank" href="https://www.linkedin.com/company-beta/9430489/" class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip" title="Follow us">
+  <i class="fab fa-linkedin"></i>
+</a>
+<a target="_blank" href="https://github.com/creativetimofficial/now-ui-kit-angular" class="btn btn-neutral btn-icon btn-github btn-round btn-lg" rel="tooltip" title="Star on Github">
+  <i class="fab fa-github"></i>
+</a>
+</div>
+</div>
+<footer class="footer" data-background-color="black">
+<div class="container">
+<nav>
+<ul>
+<li>
+    <a href="https://www.creative-tim.com">
+        Creative Tim
+    </a>
+</li>
+<li>
+    <a href="https://www.creative-tim.com/about-us">
+        About Us
+    </a>
+</li>
+<li>
+    <a href="http://blog.creative-tim.com">
+        Blog
+    </a>
+</li>
+<li>
+    <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+        MIT License
+    </a>
+</li>
+</ul>
+</nav>
+<div class="copyright">
+&copy;
+{{data | date: 'yyyy'}}, Designed by
+<a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+<a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+</div>
+</div>
+</footer>

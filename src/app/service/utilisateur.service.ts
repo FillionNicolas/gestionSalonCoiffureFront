@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UtilisateurService {
-  private baseURL = 'http://localhost:9090/utilisateurs'
+  private baseURL = 'http://localhost:9004/microservice-utilisateur/utilisateurs'
   constructor(private httpClient: HttpClient) { }
   
   public findAll(): Observable<any> {

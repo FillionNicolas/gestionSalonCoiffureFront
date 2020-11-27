@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Avis } from 'app/model/avis';
 import { Reclamation } from 'app/model/reclamation';
-import { AvisService } from 'app/services/avisService';
-import { ReclamationService } from 'app/services/reclamationService';
+import { AvisService } from 'app/service/avisService';
+import { ReclamationService } from 'app/service/reclamationService';
 
 @Component({
   selector: 'app-reclamations',

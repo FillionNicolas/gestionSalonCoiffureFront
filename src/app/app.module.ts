@@ -14,10 +14,11 @@ import { ReservationsComponent } from './reservations/reservations.component';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { BoutiqueComponent } from './boutique/boutique.component';
 import { IndexComponent } from './index/index.component';
-import { AvisService } from './services/avisService';
-import { ReclamationService } from './services/reclamationService';
+import { AvisService } from './service/avisService';
+import { ReclamationService } from './service/reclamationService';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './logout/logout.component';
+import { CreateAccountComponent } from './createAccount/createaccount.component';
 
 
 
@@ -31,6 +32,7 @@ import { LogoutComponent } from './logout/logout.component';
         BoutiqueComponent,
         IndexComponent,
         LogoutComponent,
+        CreateAccountComponent,
       
 
     ],

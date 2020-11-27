@@ -14,6 +14,7 @@ import { BoutiqueComponent } from './boutique/boutique.component';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { IndexComponent } from './index/index.component';
 import { LogoutComponent } from './logout/logout.component';
+import { CreateAccountComponent } from './createAccount/createaccount.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes =[
     { path: 'boutique',             component: BoutiqueComponent},
     { path: 'index2',                component: IndexComponent },
     { path: 'logout',               component: LogoutComponent },
+    { path : 'createAcount',        component : CreateAccountComponent},
 ];
 
 @NgModule({
